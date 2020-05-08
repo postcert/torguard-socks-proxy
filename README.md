@@ -1,16 +1,15 @@
-# A socks5 proxy via Private Internet Access.
-
-An [Alpine](https://alpinelinux.org/) Linux container running a socks5 proxy (using [dante](https://www.inet.no/dante/)) via Private Internet Access (OpenVPN).
+# A socks5 proxy via Torguard. (Not Working Yet)
+An [Alpine](https://alpinelinux.org/) Linux container running a socks5 proxy (using [dante](https://www.inet.no/dante/)) via Torguard (OpenVPN).
 
 Protect your browsing activities through an encrypted and anonymized VPN proxy!
 
-You will need a [PrivateInternetAccess](https://www.privateinternetaccess.com/pages/how-it-works) account.
-If you don't have one, you can [sign up here](https://www.privateinternetaccess.com/pages/buy-vpn) for one.
+You will need a [Torguard](https://torguard.net/index.php) account.
+If you don't have one, you can [sign up here](https://torguard.net/anonymoustorrentvpn.php) for one.
 
-[![Docker Build Status](https://img.shields.io/docker/build/oneofone/pia-socks-proxy.svg?style=flat-square)]()
-[![Docker Build Status](https://img.shields.io/docker/automated/oneofone/pia-socks-proxy.svg?style=flat-square)]()
-[![Docker Build Status](https://img.shields.io/docker/pulls/oneofone/pia-socks-proxy.svg?style=flat-square)]()
-[![Docker Build Status](https://img.shields.io/docker/stars/oneofone/pia-socks-proxy.svg?style=flat-square)]()
+[![Docker Build Status](https://img.shields.io/docker/build/postcert/torguard-socks-proxy.svg?style=flat-square)]()
+[![Docker Build Status](https://img.shields.io/docker/automated/postcert/torguard-socks-proxy.svg?style=flat-square)]()
+[![Docker Build Status](https://img.shields.io/docker/pulls/postcert/torguard-socks-proxy.svg?style=flat-square)]()
+[![Docker Build Status](https://img.shields.io/docker/stars/postcert/torguard-socks-proxy.svg?style=flat-square)]()
 
 
 ## Starting the VPN Proxy
@@ -76,6 +75,6 @@ env ALL_PROXY=socks5h://localhost:1080 git clone https://github.com/some/one.git
 ```
 
 ## Credits
-
+- [OneOfOne/pia-socks-proxy](https://github.com/OneOfOne/pia-socks-proxy), modified for use with Torguard
 - [act28/pia-openvpn-proxy](https://github.com/act28/pia-openvpn-proxy), used the openvpn config from his image, but he uses privoxy rather than socks5.
 - [qmcgaw/private-internet-access](https://github.com/qdm12/private-internet-access-docker) unbound config + dynamically download the latest PIA configs.
