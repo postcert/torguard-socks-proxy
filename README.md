@@ -42,12 +42,69 @@ docker-compose up -d
 
 ### Environment Variables
 
-`REGION` is optional. The default region is set to `US East`. `REGION` should match the supported PIA `.opvn` region config.
+`REGION` is optional. The default region is set to `USA-SEATTLE`. `REGION` should match the Torguard `.opvn` filename.
 
-See the [PIA VPN Tunnel Network page](https://www.privateinternetaccess.com/pages/network) for details.
-Use the `Location` value for your `REGION`.
+The vpn location names don't follow much of a pattern so below are the current available vpn locations:
+```
+gfind ./ -name "*.ovpn" -printf "%f\n" | sed -e "s/TorGuard\.//" | sed -e "s/\.ovpn//"
 
-`USERNAME` / `PASSWORD` - Credentials to connect to PIA
+India.Bangalore
+Poland
+Romania
+New.Zealand
+South.Korea
+Spain
+USA-LOS.ANGELES
+USA-NEW-JERSEY
+Czech
+Chile
+Netherlands
+Norway
+UK.London
+Luxembourg
+Switzerland
+Taiwan
+Thailand
+Finland
+Mexico
+Iceland
+Australia.Sydney
+Brazil
+USA-ATLANTA
+USA-CHICAGO
+Belgium
+Portugal
+Canada.Vancouver
+USA-NEW-YORK
+Slovakia
+USA-DALLAS
+Germany
+Italy
+Hungary
+Singapore
+Israel
+USA-MIAMI
+Cyprus
+France
+Bulgaria
+Japan
+Sweden
+Ireland
+USA-LAS-VEGAS
+Latvia
+Austria
+Hong.Kong
+Denmark
+Greece
+Moldova
+USA-SAN-FRANCISCO
+Canada.Toronto
+USA-SEATTLE
+Belarus
+```
+(The OVPN zips are freely available to download and can be used to check for new regions)
+
+`USERNAME` / `PASSWORD` - Credentials to connect to Torguard
 
 ## Connecting to the VPN Proxy
 
